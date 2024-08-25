@@ -10,7 +10,7 @@ class ProfileImage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: 16),
-      padding: const EdgeInsets.symmetric(vertical: 12),
+      padding: const EdgeInsets.symmetric(vertical: 15),
       width: MediaQuery.sizeOf(context).width,
       color: const Color(0xffC4C4C4),
       child: SvgPicture.asset(
