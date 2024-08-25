@@ -16,7 +16,7 @@ class _DrawerTransactionsListViewState
   int selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
+    return SliverList.builder(
       itemCount: widget.transactionsList.length,
       itemBuilder: (context, index) {
         return DrawerTransactionsListTile(
