@@ -8,6 +8,7 @@ class AdminDashboardView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color(0xffF7F9FA),
       body: AdaptiveUI(
         mobileLayout: (context) => const SizedBox(),
         desktopLayout: (context) => const DesktopLayout(),

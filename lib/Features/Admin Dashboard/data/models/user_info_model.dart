@@ -1,7 +1,7 @@
 class UserInfoModel {
   final String image, name, email;
 
-  UserInfoModel({
+  const UserInfoModel({
     required this.image,
     required this.name,
     required this.email,
