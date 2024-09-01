@@ -13,23 +13,29 @@ class UserInfoListTile extends StatelessWidget {
   final UserInfoModel userInfo;
   @override
   Widget build(BuildContext context) {
-    return ListTile(
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-      tileColor: ColorPalette.lightGrey,
-      leading: SvgPicture.asset(
-        userInfo.image,
-        height: responsiveFontSize(
-          context,
-          baseFont: 28,
+    return Card(
+      elevation: 0,
+      color: ColorPalette.lightGrey,
+      child: Center(
+        child: ListTile(
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+          leading: SvgPicture.asset(
+            userInfo.image,
+            height: responsiveFontSize(
+              context,
+              baseFont: 28,
+            ),
+          ),
+          title: Text(
+            userInfo.name,
+            style: TextStyles.styleSemiBold16,
+          ),
+          subtitle: Text(
+            userInfo.email,
+            style: TextStyles.styleRegular12,
+          ),
         ),
-      ),
-      title: Text(
-        userInfo.name,
-        style: TextStyles.styleSemiBold16,
-      ),
-      subtitle: Text(
-        userInfo.email,
-        style: TextStyles.styleRegular12,
       ),
     );
   }
