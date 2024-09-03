@@ -1,5 +1,6 @@
 {
     "java.compile.nullAnalysis.mode": "automatic",
     "pieces.cloudCapabilities": "Blended",
-    "pieces.telemetry": true
+    "pieces.telemetry": true,
+    "cmake.sourceDirectory": "C:/Users/DELL/Desktop/flutter_projects/Responsive UI Course/responsive_admin_dashboard/linux"
 }

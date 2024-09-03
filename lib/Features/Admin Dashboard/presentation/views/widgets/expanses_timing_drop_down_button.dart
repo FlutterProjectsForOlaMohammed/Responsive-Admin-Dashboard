@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:responsive_admin_dashboard/core/utils/app_images.dart';
 import 'package:responsive_admin_dashboard/core/utils/color_palette.dart';
 import 'package:responsive_admin_dashboard/core/utils/text_styles.dart';
 
@@ -51,12 +53,12 @@ class _ExpansesTimingDropDownButtonState
           dropdownColor: const Color(0xffF7F9FA),
           focusColor: Colors.transparent,
           style: TextStyles.styleMedium16,
-          icon: const Padding(
-            padding: EdgeInsets.fromLTRB(18, 0, 0, 0),
-            child: Icon(
-              Icons.keyboard_arrow_down_rounded,
-              size: 24,
-              color: ColorPalette.darkBlue,
+          icon: Padding(
+            padding: const EdgeInsets.fromLTRB(18, 0, 0, 0),
+            child: SvgPicture.asset(
+              Assets.imagesArrowDown,
+              colorFilter: const ColorFilter.mode(
+                  ColorPalette.darkBlue, BlendMode.srcIn),
             ),
           ),
           value: selectedItem,

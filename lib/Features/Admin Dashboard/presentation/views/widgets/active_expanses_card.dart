@@ -33,7 +33,7 @@ class ActiveExpansesCard extends StatelessWidget {
               iconColor: ColorPalette.white,
               arrowColor: ColorPalette.lightGrey,
             ),
-            SizedBox(
+            const SizedBox(
               height: 34,
             ),
             Text(
