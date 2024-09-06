@@ -12,8 +12,8 @@ class YourCardPageView extends StatelessWidget {
       itemCount: 3,
       itemBuilder: (context, index) {
         return const Padding(
-          padding: const EdgeInsets.only(right: 4),
-          child: const CardSection(),
+          padding: EdgeInsets.only(right: 4),
+          child: CardSection(),
         );
       },
     );

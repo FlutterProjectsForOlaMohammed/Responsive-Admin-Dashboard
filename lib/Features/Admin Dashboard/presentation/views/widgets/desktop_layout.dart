@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_admin_dashboard/Features/Admin%20Dashboard/presentation/views/widgets/custom_drawer.dart';
 import 'package:responsive_admin_dashboard/Features/Admin%20Dashboard/presentation/views/widgets/expanses_section.dart';
-import 'package:responsive_admin_dashboard/Features/Admin%20Dashboard/presentation/views/widgets/your_card_section.dart';
+import 'package:responsive_admin_dashboard/Features/Admin%20Dashboard/presentation/views/widgets/your_card_and_transactions_and_income_section.dart';
 
 class DesktopLayout extends StatelessWidget {
   const DesktopLayout({super.key});
@@ -26,7 +26,7 @@ class DesktopLayout extends StatelessWidget {
         ),
         Expanded(
           flex: 3,
-          child: YourCardSection(),
+          child: YourCardAndTransactionsAndIncomeSection(),
         ),
       ],
     );
