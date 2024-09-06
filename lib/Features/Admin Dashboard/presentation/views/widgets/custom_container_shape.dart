@@ -7,7 +7,6 @@ class CustomContainerShape extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.fromLTRB(32, 0, 24, 0),
       padding: EdgeInsets.all(padding ?? 20),
       decoration: BoxDecoration(
         color: Colors.white,

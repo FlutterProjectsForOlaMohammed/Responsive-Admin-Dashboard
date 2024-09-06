@@ -19,8 +19,8 @@ class Assets {
   static const String imagesAvatar3 = "assets/images/avatar_3.svg";
 
   /// Assets for imagesCardShape
-  /// assets/images/card_shape.svg
-  static const String imagesCardShape = "assets/images/card_shape.svg";
+  /// assets/images/card_shape.png
+  static const String imagesCardShape = "assets/images/card_shape.png";
 
   /// Assets for imagesDashboard
   /// assets/images/dashboard.svg
