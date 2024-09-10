@@ -32,7 +32,7 @@ class CustomDrawer extends StatelessWidget {
             const SliverToBoxAdapter(
               child: SizedBox(height: 16),
             ),
-            SliverToBoxAdapter(
+            const SliverToBoxAdapter(
               child: UserInfoListTile(
                 userInfo: UserInfoModel(
                   image: Assets.imagesAvatar1,

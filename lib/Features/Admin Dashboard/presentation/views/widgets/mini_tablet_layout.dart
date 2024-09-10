@@ -3,40 +3,33 @@ import 'package:responsive_admin_dashboard/Features/Admin%20Dashboard/presentati
 import 'package:responsive_admin_dashboard/Features/Admin%20Dashboard/presentation/views/widgets/expanses_section.dart';
 import 'package:responsive_admin_dashboard/Features/Admin%20Dashboard/presentation/views/widgets/your_card_and_transactions_and_income_section.dart';
 
-class DesktopLayout extends StatelessWidget {
-  const DesktopLayout({super.key});
+class MiniTabletLayout extends StatelessWidget {
+  const MiniTabletLayout({super.key});
 
   @override
   Widget build(BuildContext context) {
     return const Row(
       children: [
         Expanded(
-          flex: 2,
           child: CustomDrawer(),
-        ),
-        SizedBox(
-          width: 32,
-        ),
-        const Expanded(
-          flex: 4,
-          child: Padding(
-            padding: EdgeInsets.only(top: 40, bottom: 32),
-            child: ExpansesSection(),
-          ),
         ),
         SizedBox(
           width: 24,
         ),
         Expanded(
-          flex: 3,
+          flex: 2,
           child: Padding(
-            padding: EdgeInsets.only(top: 40, bottom: 32),
-            child: YourCardAndTransactionsAndIncomeSection(),
+            padding: EdgeInsets.symmetric(vertical: 16),
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  ExpansesSection(),
+                  YourCardAndTransactionsAndIncomeSection(),
+                ],
+              ),
+            ),
           ),
-        ),
-        SizedBox(
-          width: 32,
-        ),
+        )
       ],
     );
   }

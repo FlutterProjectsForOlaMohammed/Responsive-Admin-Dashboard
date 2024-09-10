@@ -6,15 +6,21 @@ class AdaptiveUI extends StatelessWidget {
     required this.mobileLayout,
     required this.desktopLayout,
     required this.tabletLayout,
+    required this.miniTabletLayout,
   });
-  final WidgetBuilder mobileLayout, desktopLayout, tabletLayout;
+  final WidgetBuilder mobileLayout,
+      desktopLayout,
+      tabletLayout,
+      miniTabletLayout;
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraints) {
-        if (constraints.maxWidth < 600) {
+        if (constraints.maxWidth < 680) {
           return mobileLayout(context);
-        } else if (constraints.maxWidth < 900) {
+        } else if (constraints.maxWidth < 890) {
+          return miniTabletLayout(context);
+        } else if (constraints.maxWidth < 1250) {
           return tabletLayout(context);
         } else {
           return desktopLayout(context);
