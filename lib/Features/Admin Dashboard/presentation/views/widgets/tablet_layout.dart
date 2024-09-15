@@ -9,18 +9,25 @@ class TabletLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Padding(
       padding: EdgeInsets.symmetric(horizontal: 12, vertical: 16),
-      child: Row(
-        children: [
-          Expanded(
-            flex: 4,
-            child: ExpansesSection(),
-          ),
-          SizedBox(
-            width: 10,
-          ),
-          Expanded(
-            flex: 3,
-            child: YourCardAndTransactionsAndIncomeSection(),
+      child: CustomScrollView(
+        slivers: [
+          SliverFillRemaining(
+            hasScrollBody: false,
+            child: Row(
+              children: [
+                Expanded(
+                  flex: 4,
+                  child: ExpansesSection(),
+                ),
+                SizedBox(
+                  width: 10,
+                ),
+                Expanded(
+                  flex: 3,
+                  child: YourCardAndTransactionsAndIncomeSection(),
+                ),
+              ],
+            ),
           ),
         ],
       ),

@@ -7,5 +7,8 @@ double responsiveFontSize(
 }) {
   double scaleFactor = platformScaleFactor(context);
   double fontSize = scaleFactor * baseFont;
-  return fontSize.clamp(baseFont * 0.8, baseFont * 1.1);
+  return fontSize.clamp(
+    baseFont * 0.8,
+    baseFont * 1.1,
+  );
 }

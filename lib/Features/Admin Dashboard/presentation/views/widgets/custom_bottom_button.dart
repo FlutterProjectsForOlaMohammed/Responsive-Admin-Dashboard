@@ -10,18 +10,24 @@ class CustomBottomButton extends StatelessWidget {
   final Color backgroundColor;
   @override
   Widget build(BuildContext context) {
-    return CupertinoButton(
-      padding: const EdgeInsets.symmetric(vertical: 16),
-      color: backgroundColor,
-      borderRadius: BorderRadius.circular(12),
-      onPressed: () {},
-      child: Text(
-        insideText,
-        style: (backgroundColor == Colors.white)
-            ? TextStyles.styleSemiBold18.copyWith(
-                color: ColorPalette.lightBlue,
-              )
-            : TextStyles.styleSemiBold18,
+    return Container(
+      decoration: BoxDecoration(
+        border: Border.all(color: ColorPalette.lightBlue),
+        borderRadius: BorderRadius.circular(12),
+      ),
+      child: CupertinoButton(
+        padding: const EdgeInsets.symmetric(vertical: 16),
+        color: backgroundColor,
+        borderRadius: BorderRadius.circular(12),
+        onPressed: () {},
+        child: Text(
+          insideText,
+          style: (backgroundColor == Colors.white)
+              ? TextStyles.styleSemiBold18(context).copyWith(
+                  color: ColorPalette.lightBlue,
+                )
+              : TextStyles.styleSemiBold18(context),
+        ),
       ),
     );
   }

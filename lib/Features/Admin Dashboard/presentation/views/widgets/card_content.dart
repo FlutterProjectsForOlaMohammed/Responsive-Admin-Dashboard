@@ -12,7 +12,7 @@ class CardContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 16, left: 31, right: 24, bottom: 27),
+      padding: const EdgeInsets.only(top: 16, left: 31, right: 24),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
@@ -20,12 +20,12 @@ class CardContent extends StatelessWidget {
             contentPadding: EdgeInsets.zero,
             title: Text(
               "Name card",
-              style:
-                  TextStyles.styleRegular16.copyWith(color: ColorPalette.white),
+              style: TextStyles.styleRegular16(context)
+                  .copyWith(color: ColorPalette.white),
             ),
-            subtitle: const Text(
+            subtitle: Text(
               "Syah Bandi",
-              style: TextStyles.styleMedium20,
+              style: TextStyles.styleMedium20(context),
             ),
             trailing: Padding(
               padding: const EdgeInsets.only(right: 20),
@@ -37,7 +37,7 @@ class CardContent extends StatelessWidget {
           ),
           Text(
             "0918 8124 0042 8129",
-            style: TextStyles.styleSemiBold24.copyWith(
+            style: TextStyles.styleSemiBold24(context).copyWith(
               color: ColorPalette.white,
             ),
           ),
@@ -46,8 +46,13 @@ class CardContent extends StatelessWidget {
           ),
           Text(
             "12/20 - 124",
-            style:
-                TextStyles.styleRegular16.copyWith(color: ColorPalette.white),
+            style: TextStyles.styleRegular16(context)
+                .copyWith(color: ColorPalette.white),
+          ),
+          const Flexible(
+            child: SizedBox(
+              height: 27,
+            ),
           ),
         ],
       ),

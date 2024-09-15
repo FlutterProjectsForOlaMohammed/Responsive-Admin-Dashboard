@@ -36,15 +36,26 @@ class NotActiveExpansescard extends StatelessWidget {
             const SizedBox(
               height: 34,
             ),
-            Text(expansesCardModel.name, style: TextStyles.styleSemiBold16),
+            FittedBox(
+              fit: BoxFit.scaleDown,
+              alignment: Alignment.centerLeft,
+              child: Text(expansesCardModel.name,
+                  style: TextStyles.styleSemiBold16(context)),
+            ),
             const SizedBox(
               height: 8,
             ),
-            Text(expansesCardModel.date, style: TextStyles.styleRegular14),
+            Text(expansesCardModel.date,
+                style: TextStyles.styleRegular14(context)),
             const SizedBox(
               height: 16,
             ),
-            Text(expansesCardModel.price, style: TextStyles.styleSemiBold24),
+            FittedBox(
+              fit: BoxFit.scaleDown,
+              alignment: Alignment.centerLeft,
+              child: Text(expansesCardModel.price,
+                  style: TextStyles.styleSemiBold24(context)),
+            ),
           ],
         ),
       ),

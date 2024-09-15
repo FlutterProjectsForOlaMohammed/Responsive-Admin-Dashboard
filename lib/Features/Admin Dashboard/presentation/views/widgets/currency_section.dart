@@ -7,17 +7,17 @@ class CurrencySection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
           "Item amount",
-          style: TextStyles.styleMedium16,
+          style: TextStyles.styleMedium16(context),
         ),
-        SizedBox(
+        const SizedBox(
           height: 12,
         ),
-        CurrencyDropDown(),
+        const CurrencyDropDown(),
       ],
     );
   }

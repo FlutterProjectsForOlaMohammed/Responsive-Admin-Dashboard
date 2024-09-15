@@ -27,9 +27,13 @@ class ActiveDrawerTransactionListTile extends StatelessWidget {
         transactionModel.leadingIcon,
         height: 24,
       ),
-      title: Text(
-        transactionModel.name,
-        style: TextStyles.styleBold16,
+      title: FittedBox(
+        alignment: Alignment.centerLeft,
+        fit: BoxFit.scaleDown,
+        child: Text(
+          transactionModel.name,
+          style: TextStyles.styleBold16(context),
+        ),
       ),
     );
   }

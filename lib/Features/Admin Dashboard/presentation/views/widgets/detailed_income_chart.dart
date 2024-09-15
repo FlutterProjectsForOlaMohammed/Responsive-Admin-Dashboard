@@ -3,13 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:responsive_admin_dashboard/Features/Admin%20Dashboard/data/models/pie_chart_data_model.dart';
 import 'package:responsive_admin_dashboard/core/utils/text_styles.dart';
 
-class IncomeChart extends StatefulWidget {
-  const IncomeChart({super.key});
+class DetailedIncomeChart extends StatefulWidget {
+  const DetailedIncomeChart({super.key});
   @override
-  State<IncomeChart> createState() => _IncomeChartState();
+  State<DetailedIncomeChart> createState() => _IncomeChartState();
 }
 
-class _IncomeChartState extends State<IncomeChart> {
+class _IncomeChartState extends State<DetailedIncomeChart> {
   int touchedSection = -1;
   @override
   Widget build(BuildContext context) {
@@ -24,26 +24,26 @@ class _IncomeChartState extends State<IncomeChart> {
           name: "Other",
           color: Color(0xffE2DECD),
           value: 24,
-          radius: 24,
-          showTitle: false),
+          radius: 50,
+          showTitle: true),
       const PieChartDataModel(
           name: "Product royalti",
           color: Color(0xff064061),
           value: 20,
-          radius: 24,
-          showTitle: false),
+          radius: 50,
+          showTitle: true),
       const PieChartDataModel(
           name: "Design product",
           color: Color(0xff4EB7F2),
           value: 20,
-          radius: 24,
-          showTitle: false),
+          radius: 50,
+          showTitle: true),
       const PieChartDataModel(
           name: "Design service",
           color: Color(0xff208CC8),
           value: 40,
-          radius: 24,
-          showTitle: false),
+          radius: 50,
+          showTitle: true),
     ];
     return PieChartData(
       pieTouchData: PieTouchData(
@@ -59,14 +59,19 @@ class _IncomeChartState extends State<IncomeChart> {
         pieChartDataList.length,
         (index) {
           return PieChartSectionData(
-            title:
-                "${pieChartDataList[index].name} : ${pieChartDataList[index].value}",
-            titleStyle: TextStyles.styleSemiBold16(context)
-                .copyWith(color: Colors.black),
+            title: (touchedSection == index)
+                ? pieChartDataList[index].name
+                : "${pieChartDataList[index].value}%",
+            titlePositionPercentageOffset:
+                (touchedSection == index) ? -1.5 : null,
+            titleStyle: TextStyles.styleSemiBold16(context).copyWith(
+                color: (touchedSection == index)
+                    ? const Color.fromARGB(255, 114, 113, 113)
+                    : Colors.white),
             value: pieChartDataList[index].value,
             color: pieChartDataList[index].color,
             radius:
-                (touchedSection == index) ? 26 : pieChartDataList[index].radius,
+                (touchedSection == index) ? 55 : pieChartDataList[index].radius,
             showTitle: pieChartDataList[index].showTitle,
           );
         },

@@ -29,7 +29,10 @@ class MiniTabletLayout extends StatelessWidget {
               ),
             ),
           ),
-        )
+        ),
+        SizedBox(
+          width: 24,
+        ),
       ],
     );
   }

@@ -27,13 +27,21 @@ class UserInfoListTile extends StatelessWidget {
               baseFont: 28,
             ),
           ),
-          title: Text(
-            userInfo.name,
-            style: TextStyles.styleSemiBold16,
+          title: FittedBox(
+            fit: BoxFit.scaleDown,
+            alignment: Alignment.centerLeft,
+            child: Text(
+              userInfo.name,
+              style: TextStyles.styleSemiBold16(context),
+            ),
           ),
-          subtitle: Text(
-            userInfo.email,
-            style: TextStyles.styleRegular12,
+          subtitle: FittedBox(
+            fit: BoxFit.scaleDown,
+            alignment: Alignment.centerLeft,
+            child: Text(
+              userInfo.email,
+              style: TextStyles.styleRegular12(context),
+            ),
           ),
         ),
       ),

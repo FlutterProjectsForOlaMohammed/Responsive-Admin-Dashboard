@@ -20,16 +20,16 @@ class TransactionProcessListTile extends StatelessWidget {
             contentPadding: EdgeInsets.zero,
             title: Text(
               transactionProcessModel.title,
-              style: TextStyles.styleSemiBold16,
+              style: TextStyles.styleSemiBold16(context),
             ),
             subtitle: Text(
               transactionProcessModel.date,
-              style:
-                  TextStyles.styleRegular16.copyWith(color: ColorPalette.grey),
+              style: TextStyles.styleRegular16(context)
+                  .copyWith(color: ColorPalette.grey),
             ),
             trailing: Text(
               transactionProcessModel.amount,
-              style: TextStyles.styleSemiBold20.copyWith(
+              style: TextStyles.styleSemiBold20(context).copyWith(
                 color: transactionProcessModel.amountColor,
               ),
             ),

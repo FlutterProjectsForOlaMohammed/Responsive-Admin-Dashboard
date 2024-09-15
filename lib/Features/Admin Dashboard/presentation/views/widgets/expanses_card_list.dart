@@ -39,10 +39,10 @@ class _ExpansesCardListState extends State<ExpansesCardList> {
           return Expanded(
             child: Padding(
               padding: (item.key == 0)
-                  ? const EdgeInsets.only(right: 12)
+                  ? const EdgeInsets.only(right: 8)
                   : (item.key == 1)
-                      ? const EdgeInsets.only(right: 6)
-                      : const EdgeInsets.only(left: 6),
+                      ? const EdgeInsets.only(right: 4, left: 4)
+                      : const EdgeInsets.only(left: 8),
               child: ActiveExpansesCard(
                 expansesCardModel: item.value,
                 onTap: () {
@@ -57,10 +57,10 @@ class _ExpansesCardListState extends State<ExpansesCardList> {
           return Expanded(
             child: Padding(
               padding: (item.key == 0)
-                  ? const EdgeInsets.only(right: 12)
+                  ? const EdgeInsets.only(right: 8)
                   : (item.key == 1)
-                      ? const EdgeInsets.only(right: 6)
-                      : const EdgeInsets.only(left: 6),
+                      ? const EdgeInsets.only(right: 4, left: 4)
+                      : const EdgeInsets.only(left: 8),
               child: NotActiveExpansescard(
                 expansesCardModel: item.value,
                 onTap: () {

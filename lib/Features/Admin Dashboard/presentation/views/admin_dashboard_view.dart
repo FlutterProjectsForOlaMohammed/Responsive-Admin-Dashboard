@@ -6,6 +6,7 @@ import 'package:responsive_admin_dashboard/Features/Admin%20Dashboard/presentati
 import 'package:responsive_admin_dashboard/Features/Admin%20Dashboard/presentation/views/widgets/mini_tablet_layout.dart';
 import 'package:responsive_admin_dashboard/Features/Admin%20Dashboard/presentation/views/widgets/mobile_layout.dart';
 import 'package:responsive_admin_dashboard/Features/Admin%20Dashboard/presentation/views/widgets/tablet_layout.dart';
+import 'package:responsive_admin_dashboard/core/utils/size_config.dart';
 
 class AdminDashboardView extends StatelessWidget {
   const AdminDashboardView({super.key});
@@ -16,9 +17,14 @@ class AdminDashboardView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       key: drawerKey,
-      drawer:
-          MediaQuery.sizeOf(context).width < 1250 ? const CustomDrawer() : null,
-      appBar: MediaQuery.sizeOf(context).width < 1250
+      drawer: MediaQuery.sizeOf(context).width < SizeConfig.miniTablet ||
+              (MediaQuery.sizeOf(context).width >= SizeConfig.tablet &&
+                  MediaQuery.sizeOf(context).width < SizeConfig.desktop)
+          ? const CustomDrawer()
+          : null,
+      appBar: MediaQuery.sizeOf(context).width < SizeConfig.miniTablet ||
+              (MediaQuery.sizeOf(context).width >= SizeConfig.tablet &&
+                  MediaQuery.sizeOf(context).width < SizeConfig.desktop)
           ? CustomAdminDashboardAppBar(
               drawerKey: drawerKey,
             )

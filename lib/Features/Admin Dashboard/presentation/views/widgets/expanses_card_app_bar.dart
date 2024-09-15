@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:responsive_admin_dashboard/core/Function/responsive_font_size.dart';
 
 class ExpansesCardAppBar extends StatelessWidget {
   const ExpansesCardAppBar(
@@ -17,11 +18,13 @@ class ExpansesCardAppBar extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        CircleAvatar(
-          backgroundColor: backgroundIconColor,
-          radius: 30,
-          child: SvgPicture.asset(icon,
-              colorFilter: ColorFilter.mode(iconColor, BlendMode.srcIn)),
+        Flexible(
+          child: CircleAvatar(
+            backgroundColor: backgroundIconColor,
+            radius: 30,
+            child: SvgPicture.asset(icon,
+                colorFilter: ColorFilter.mode(iconColor, BlendMode.srcIn)),
+          ),
         ),
         Icon(
           Icons.keyboard_arrow_right_rounded,

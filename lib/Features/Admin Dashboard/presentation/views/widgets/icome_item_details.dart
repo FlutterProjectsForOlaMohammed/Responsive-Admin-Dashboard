@@ -20,12 +20,12 @@ class IncomeItemDetails extends StatelessWidget {
           ),
           Text(
             pieChartDataModel.name,
-            style: TextStyles.styleRegular16,
+            style: TextStyles.styleRegular16(context),
           ),
           const Spacer(),
           Text(
             "${pieChartDataModel.value}%",
-            style: TextStyles.styleMedium16
+            style: TextStyles.styleMedium16(context)
                 .copyWith(color: const Color(0xff208CC8)),
           ),
         ],

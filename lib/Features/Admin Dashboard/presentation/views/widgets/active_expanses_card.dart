@@ -36,23 +36,34 @@ class ActiveExpansesCard extends StatelessWidget {
             const SizedBox(
               height: 34,
             ),
-            Text(
-              expansesCardModel.name,
-              style: TextStyles.styleSemiBold16.copyWith(color: Colors.white),
+            FittedBox(
+              fit: BoxFit.scaleDown,
+              alignment: Alignment.centerLeft,
+              child: Text(
+                expansesCardModel.name,
+                style: TextStyles.styleSemiBold16(context)
+                    .copyWith(color: Colors.white),
+              ),
             ),
             const SizedBox(
               height: 8,
             ),
             Text(
               expansesCardModel.date,
-              style: TextStyles.styleRegular14.copyWith(color: Colors.white),
+              style: TextStyles.styleRegular14(context)
+                  .copyWith(color: Colors.white),
             ),
             const SizedBox(
               height: 16,
             ),
-            Text(
-              expansesCardModel.price,
-              style: TextStyles.styleSemiBold24.copyWith(color: Colors.white),
+            FittedBox(
+              fit: BoxFit.scaleDown,
+              alignment: Alignment.centerLeft,
+              child: Text(
+                expansesCardModel.price,
+                style: TextStyles.styleSemiBold24(context)
+                    .copyWith(color: Colors.white),
+              ),
             ),
           ],
         ),

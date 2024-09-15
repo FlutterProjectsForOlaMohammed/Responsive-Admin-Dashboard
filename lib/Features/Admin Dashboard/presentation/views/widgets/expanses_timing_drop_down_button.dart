@@ -52,7 +52,7 @@ class _ExpansesTimingDropDownButtonState
           elevation: 0,
           dropdownColor: const Color(0xffF7F9FA),
           focusColor: Colors.transparent,
-          style: TextStyles.styleMedium16,
+          style: TextStyles.styleMedium16(context),
           icon: Padding(
             padding: const EdgeInsets.fromLTRB(18, 0, 0, 0),
             child: SvgPicture.asset(

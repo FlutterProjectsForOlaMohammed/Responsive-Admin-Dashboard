@@ -24,7 +24,7 @@ class NotActiveDrawerTransactionListTile extends StatelessWidget {
       ),
       title: Text(
         transactionModel.name,
-        style: TextStyles.styleRegular16,
+        style: TextStyles.styleRegular16(context),
       ),
     );
   }

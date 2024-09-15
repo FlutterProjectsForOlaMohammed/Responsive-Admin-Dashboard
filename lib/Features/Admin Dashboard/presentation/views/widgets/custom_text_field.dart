@@ -18,7 +18,7 @@ class CustomTextField extends StatelessWidget {
         children: [
           Text(
             lable,
-            style: TextStyles.styleMedium16,
+            style: TextStyles.styleMedium16(context),
           ),
           const SizedBox(
             height: 12,
@@ -32,7 +32,7 @@ class CustomTextField extends StatelessWidget {
               filled: true,
               contentPadding: const EdgeInsets.fromLTRB(20, 20, 0, 20),
               hintText: hintText,
-              hintStyle: TextStyles.styleRegular16.copyWith(
+              hintStyle: TextStyles.styleRegular16(context).copyWith(
                 color: ColorPalette.grey,
               ),
             ),

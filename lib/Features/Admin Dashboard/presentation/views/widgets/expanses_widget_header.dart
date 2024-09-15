@@ -9,14 +9,14 @@ class ExpansesWidgetHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Row(
+    return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(
           "All Expenses",
-          style: TextStyles.styleSemiBold20,
+          style: TextStyles.styleSemiBold20(context),
         ),
-        ExpansesTimingDropDownButton(),
+        const ExpansesTimingDropDownButton(),
       ],
     );
   }

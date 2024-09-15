@@ -7,14 +7,12 @@ class ExpansesSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const SingleChildScrollView(
-      child: const Column(children: [
-        ExpansesWidget(),
-        SizedBox(
-          height: 24,
-        ),
-        QuickInvoiceWidget(),
-      ]),
-    );
+    return const Column(children: [
+      ExpansesWidget(),
+      SizedBox(
+        height: 24,
+      ),
+      QuickInvoiceWidget(),
+    ]);
   }
 }
